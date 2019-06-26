@@ -1,0 +1,23 @@
+Contas Pagar
+
+	Id
+	Nome
+	Valor
+	Tipo(Estudo,eletronico,etc)
+	Data_Vencimento
+
+Clientes
+	Id
+	Nome
+	CPF
+	Data de nascimento
+	RG
+
+
+Contas Receber
+
+	Id
+	Nome
+	Valor
+	Valor recebido
+	Data recebimento

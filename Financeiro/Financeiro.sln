@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "TelaInicial\View.csproj", "{1D69004B-93E7-4DE4-818C-F3922F801E0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{F2E7F38D-549A-4B30-92FF-A66549ADA326}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceiroRepository", "ContaPagarRepository\FinanceiroRepository.csproj", "{EE9CD2B8-84C6-465B-96D0-2D3358B71F8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D69004B-93E7-4DE4-818C-F3922F801E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D69004B-93E7-4DE4-818C-F3922F801E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D69004B-93E7-4DE4-818C-F3922F801E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D69004B-93E7-4DE4-818C-F3922F801E0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2E7F38D-549A-4B30-92FF-A66549ADA326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2E7F38D-549A-4B30-92FF-A66549ADA326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2E7F38D-549A-4B30-92FF-A66549ADA326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2E7F38D-549A-4B30-92FF-A66549ADA326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE9CD2B8-84C6-465B-96D0-2D3358B71F8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE9CD2B8-84C6-465B-96D0-2D3358B71F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE9CD2B8-84C6-465B-96D0-2D3358B71F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE9CD2B8-84C6-465B-96D0-2D3358B71F8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A714E96-0552-41BC-9968-B8DE7E9BDFA7}
+	EndGlobalSection
+EndGlobal
