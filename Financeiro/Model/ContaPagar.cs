@@ -13,5 +13,6 @@ namespace Model
         public decimal Valor;
         public string Tipo;
         public DateTime Data_Vencimento;
+        public bool Fechada;
     }
 }

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EE9CD2B8-84C6-465B-96D0-2D3358B71F8F}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>ContaPagarRepository</RootNamespace>
-    <AssemblyName>ContaPagarRepository</AssemblyName>
+    <RootNamespace>FinanceiroRepository</RootNamespace>
+    <AssemblyName>FinanceiroRepository</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

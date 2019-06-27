@@ -7,7 +7,8 @@ CREATE TABLE Contas_Pagar (
         nome VARCHAR(100),
         valor decimal(12,2),
         tipo VARCHAR(50),
-		data_Vencimento DATE
+		data_Vencimento DATE,
+		fechada BIT
 );
 CREATE TABLE Contas_Receber(
 		id INT PRIMARY KEY IDENTITY(1,1),

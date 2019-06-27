@@ -27,5 +27,11 @@ namespace TelaInicial
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormContasPagar form = new FormContasPagar();
+            form.Show();
+        }
     }
 }

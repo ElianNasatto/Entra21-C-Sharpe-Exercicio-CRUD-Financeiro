@@ -38,17 +38,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.checkPaga = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
             this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnValorConta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnValorRecebido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDataPagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPaga = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -145,6 +145,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Conta Receber";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(10, 203);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(171, 29);
+            this.dateTimePicker1.TabIndex = 16;
+            // 
             // btnAlterar
             // 
             this.btnAlterar.Enabled = false;
@@ -193,16 +201,6 @@
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(350, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 24);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Lista de contas";
-            // 
             // ColumnId
             // 
             this.ColumnId.HeaderText = "ID";
@@ -239,13 +237,15 @@
             this.ColumnPaga.Name = "ColumnPaga";
             this.ColumnPaga.ReadOnly = true;
             // 
-            // dateTimePicker1
+            // label5
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(10, 203);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(171, 29);
-            this.dateTimePicker1.TabIndex = 16;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(350, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(134, 24);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Lista de contas";
             // 
             // btnAdicionar
             // 
