@@ -46,9 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClientesRepository.cs" />
-    <Compile Include="ContasPagarRepository.cs" />
-    <Compile Include="ContasReceberRepository.cs" />
+    <Compile Include="ClienteRepository.cs" />
+    <Compile Include="ContaPagarRepository.cs" />
+    <Compile Include="ContaReceberRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

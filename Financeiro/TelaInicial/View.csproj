@@ -117,5 +117,14 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette_save_saveas_1514.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_delete_256_icon-icons.com_75995.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_37110 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class ContasReceber
+    public class ContaPagar
     {
         public int Id;
         public string Nome;
         public decimal Valor;
-        public decimal Valor_Recebido;
-        public DateTime Data_Recebimento;
-        public bool Fechada;
+        public string Tipo;
+        public DateTime Data_Vencimento;
     }
 }

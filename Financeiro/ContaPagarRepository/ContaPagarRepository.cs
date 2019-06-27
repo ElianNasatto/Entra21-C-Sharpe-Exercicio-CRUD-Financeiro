@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ContaPagarRepository
 {
-    class ClientesRepository
+    class ContaPagarRepository
     {
     }
 }

@@ -103,9 +103,39 @@ namespace TelaInicial.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap diskette_save_saveas_1514 {
+            get {
+                object obj = ResourceManager.GetObject("diskette_save_saveas_1514", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap document_delete_256_icon_icons_com_75995 {
+            get {
+                object obj = ResourceManager.GetObject("document_delete_256_icon-icons.com_75995", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap person_2_icon_icons_com_68896 {
             get {
                 object obj = ResourceManager.GetObject("person_2_icon-icons.com_68896", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_37110__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Save_37110 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
