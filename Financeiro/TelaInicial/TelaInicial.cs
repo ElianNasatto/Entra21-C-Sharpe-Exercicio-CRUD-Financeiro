@@ -33,5 +33,11 @@ namespace TelaInicial
             FormContasPagar form = new FormContasPagar();
             form.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormCliente form = new FormCliente();
+            form.Show();
+        }
     }
 }

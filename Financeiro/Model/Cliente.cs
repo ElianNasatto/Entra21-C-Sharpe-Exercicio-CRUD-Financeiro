@@ -8,11 +8,11 @@ namespace Model
 {
     public class Cliente
     {
-        int Id;
-        string Nome;
-        string CPF;
-        DateTime Data_Nascimento;
-        string RG;
+        public int Id;
+        public string Nome;
+        public string CPF;
+        public DateTime Data_Nascimento;
+        public string RG;
 
     }
 }
