@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormContasPagar));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTipo = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.checkPaga = new System.Windows.Forms.CheckBox();
@@ -40,15 +41,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnAdicionar = new System.Windows.Forms.Button();
             this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDataVencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnAdicionar = new System.Windows.Forms.Button();
-            this.txtTipo = new System.Windows.Forms.TextBox();
+            this.ColumnPaga = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +75,13 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Conta Receber";
+            // 
+            // txtTipo
+            // 
+            this.txtTipo.Location = new System.Drawing.Point(12, 209);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(219, 29);
+            this.txtTipo.TabIndex = 17;
             // 
             // dateTimePicker1
             // 
@@ -164,13 +172,55 @@
             this.ColumnNome,
             this.ColumnValor,
             this.ColumnTipo,
-            this.ColumnDataVencimento});
+            this.ColumnDataVencimento,
+            this.ColumnPaga});
             this.dataGridView1.Location = new System.Drawing.Point(354, 39);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(552, 245);
+            this.dataGridView1.Size = new System.Drawing.Size(643, 245);
             this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Image = global::TelaInicial.Properties.Resources.document_delete_256_icon_icons_com_75995;
+            this.btnExcluir.Location = new System.Drawing.Point(875, 293);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(122, 44);
+            this.btnExcluir.TabIndex = 19;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Enabled = false;
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.Image = global::TelaInicial.Properties.Resources.diskette_save_saveas_1514;
+            this.btnAlterar.Location = new System.Drawing.Point(173, 290);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(134, 44);
+            this.btnAlterar.TabIndex = 18;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // btnAdicionar
+            // 
+            this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionar.Image = global::TelaInicial.Properties.Resources.Save_37110__1_;
+            this.btnAdicionar.Location = new System.Drawing.Point(12, 290);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(150, 44);
+            this.btnAdicionar.TabIndex = 17;
+            this.btnAdicionar.Text = "Adicionar";
+            this.btnAdicionar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // ColumnId
             // 
@@ -202,56 +252,18 @@
             this.ColumnDataVencimento.Name = "ColumnDataVencimento";
             this.ColumnDataVencimento.ReadOnly = true;
             // 
-            // btnExcluir
+            // ColumnPaga
             // 
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Image = global::TelaInicial.Properties.Resources.document_delete_256_icon_icons_com_75995;
-            this.btnExcluir.Location = new System.Drawing.Point(784, 290);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(122, 44);
-            this.btnExcluir.TabIndex = 19;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Enabled = false;
-            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Image = global::TelaInicial.Properties.Resources.diskette_save_saveas_1514;
-            this.btnAlterar.Location = new System.Drawing.Point(173, 290);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(134, 44);
-            this.btnAlterar.TabIndex = 18;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            // 
-            // btnAdicionar
-            // 
-            this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionar.Image = global::TelaInicial.Properties.Resources.Save_37110__1_;
-            this.btnAdicionar.Location = new System.Drawing.Point(12, 290);
-            this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(150, 44);
-            this.btnAdicionar.TabIndex = 17;
-            this.btnAdicionar.Text = "Adicionar";
-            this.btnAdicionar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdicionar.UseVisualStyleBackColor = true;
-            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
-            // 
-            // txtTipo
-            // 
-            this.txtTipo.Location = new System.Drawing.Point(12, 209);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(219, 29);
-            this.txtTipo.TabIndex = 17;
+            this.ColumnPaga.HeaderText = "Paga";
+            this.ColumnPaga.Name = "ColumnPaga";
+            this.ColumnPaga.ReadOnly = true;
             // 
             // FormContasPagar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(918, 349);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1006, 349);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnAdicionar);
@@ -259,8 +271,12 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormContasPagar";
-            this.Text = "FormContasPagar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Contas Pagar";
+            this.Load += new System.EventHandler(this.FormContasPagar_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -282,14 +298,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnAdicionar;
+        private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnValor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDataVencimento;
-        private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnAlterar;
-        private System.Windows.Forms.Button btnAdicionar;
-        private System.Windows.Forms.TextBox txtTipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPaga;
     }
 }

@@ -12,7 +12,7 @@ namespace FinanceiroRepository
     public class ContaReceberRepository
     {
         //Caminho do arquivo do banco de dados
-        string caminhoConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Documentos\GitHub\C-Sharpe-Entra21-Exercicio-CRUD-Financeiro\BD_Financeiro.mdf;Integrated Security=True;Connect Timeout=30";
+        string caminhoConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Documentos\GitHub\C-Sharpe-Entra21-Exercicio-CRUD-Financeiro\C-Sharpe-Entra21-Exercicio-CRUD-Financeiro\Financeiro\BD_Financeiro.mdf;Integrated Security=True;Connect Timeout=30";
 
         //Adiciona um registro no banco
         public bool Adicionar(ContaReceber contaReceber)

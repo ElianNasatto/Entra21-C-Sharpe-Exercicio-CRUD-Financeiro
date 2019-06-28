@@ -240,6 +240,7 @@ namespace TelaInicial
             if (verifica == true)
             {
                 Inserir();
+                verifica = false;
             }
         }
 
