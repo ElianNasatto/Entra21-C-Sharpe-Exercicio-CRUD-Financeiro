@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ContaPagarRepository
+namespace FinanceiroRepository
 {
-    class ContaPagarRepository
+    public class ContaPagarRepository
     {
         string caminhoConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Documentos\GitHub\C-Sharpe-Entra21-Exercicio-CRUD-Financeiro\BD_Financeiro.mdf;Integrated Security=True;Connect Timeout=30";
 

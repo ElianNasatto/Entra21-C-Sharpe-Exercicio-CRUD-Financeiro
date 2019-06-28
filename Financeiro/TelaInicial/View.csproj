@@ -117,8 +117,8 @@
     <None Include="Resources\person_2_icon-icons.com_68896.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ContaPagarRepository\FinanceiroRepository.csproj">
-      <Project>{ee9cd2b8-84c6-465b-96d0-2d3358b71f8f}</Project>
+    <ProjectReference Include="..\FinanceiroRepository\FinanceiroRepository.csproj">
+      <Project>{282e4d49-3e54-4f08-af2b-08e04daf2b03}</Project>
       <Name>FinanceiroRepository</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">

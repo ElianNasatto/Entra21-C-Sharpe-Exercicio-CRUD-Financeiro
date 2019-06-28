@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "TelaInicial\View.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{F2E7F38D-549A-4B30-92FF-A66549ADA326}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceiroRepository", "ContaPagarRepository\FinanceiroRepository.csproj", "{EE9CD2B8-84C6-465B-96D0-2D3358B71F8F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceiroRepository", "FinanceiroRepository\FinanceiroRepository.csproj", "{282E4D49-3E54-4F08-AF2B-08E04DAF2B03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{F2E7F38D-549A-4B30-92FF-A66549ADA326}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2E7F38D-549A-4B30-92FF-A66549ADA326}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2E7F38D-549A-4B30-92FF-A66549ADA326}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EE9CD2B8-84C6-465B-96D0-2D3358B71F8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE9CD2B8-84C6-465B-96D0-2D3358B71F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE9CD2B8-84C6-465B-96D0-2D3358B71F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE9CD2B8-84C6-465B-96D0-2D3358B71F8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{282E4D49-3E54-4F08-AF2B-08E04DAF2B03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{282E4D49-3E54-4F08-AF2B-08E04DAF2B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{282E4D49-3E54-4F08-AF2B-08E04DAF2B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{282E4D49-3E54-4F08-AF2B-08E04DAF2B03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

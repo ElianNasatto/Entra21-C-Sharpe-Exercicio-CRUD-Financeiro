@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace ContaPagarRepository
+namespace FinanceiroRepository
 {
     public class ContaReceberRepository
     {
@@ -63,7 +62,7 @@ namespace ContaPagarRepository
             comando.Connection = conexao;
             if (id == 0)
             {
-            comando.CommandText = "SELECT * FROM Contas_Receber";
+                comando.CommandText = "SELECT * FROM Contas_Receber";
 
             }
             else
@@ -102,7 +101,7 @@ namespace ContaPagarRepository
             conexao.ConnectionString = caminhoConexao;
             try
             {
-            conexao.Open();
+                conexao.Open();
 
             }
             catch (Exception)
