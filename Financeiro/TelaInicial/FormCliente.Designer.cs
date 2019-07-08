@@ -30,22 +30,22 @@
         {
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDataNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnRG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mtxtRG = new System.Windows.Forms.MaskedTextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.mtxtValorConta = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtCPF = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnAdicionar = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDataNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnRG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -77,17 +77,41 @@
             this.dataGridView1.Size = new System.Drawing.Size(448, 245);
             this.dataGridView1.TabIndex = 21;
             // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            // 
+            // ColumnCPF
+            // 
+            this.ColumnCPF.HeaderText = "CPF";
+            this.ColumnCPF.Name = "ColumnCPF";
+            this.ColumnCPF.ReadOnly = true;
+            // 
+            // ColumnDataNascimento
+            // 
+            this.ColumnDataNascimento.HeaderText = "Data de Nascimento";
+            this.ColumnDataNascimento.Name = "ColumnDataNascimento";
+            this.ColumnDataNascimento.ReadOnly = true;
+            // 
+            // ColumnRG
+            // 
+            this.ColumnRG.HeaderText = "RG";
+            this.ColumnRG.Name = "ColumnRG";
+            this.ColumnRG.ReadOnly = true;
+            // 
             // groupBox1
             // 
             this.groupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.groupBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
+            this.groupBox1.Controls.Add(this.mtxtRG);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.mtxtValorConta);
+            this.groupBox1.Controls.Add(this.mtxtCPF);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -97,6 +121,14 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações do cliente";
+            // 
+            // mtxtRG
+            // 
+            this.mtxtRG.Location = new System.Drawing.Point(10, 209);
+            this.mtxtRG.Mask = "00,000,000-0";
+            this.mtxtRG.Name = "mtxtRG";
+            this.mtxtRG.Size = new System.Drawing.Size(147, 29);
+            this.mtxtRG.TabIndex = 17;
             // 
             // dateTimePicker1
             // 
@@ -140,13 +172,13 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Data Nascimento";
             // 
-            // mtxtValorConta
+            // mtxtCPF
             // 
-            this.mtxtValorConta.Location = new System.Drawing.Point(10, 134);
-            this.mtxtValorConta.Mask = "000,000,000-00";
-            this.mtxtValorConta.Name = "mtxtValorConta";
-            this.mtxtValorConta.Size = new System.Drawing.Size(147, 29);
-            this.mtxtValorConta.TabIndex = 3;
+            this.mtxtCPF.Location = new System.Drawing.Point(10, 134);
+            this.mtxtCPF.Mask = "000,000,000-00";
+            this.mtxtCPF.Name = "mtxtCPF";
+            this.mtxtCPF.Size = new System.Drawing.Size(147, 29);
+            this.mtxtCPF.TabIndex = 3;
             // 
             // label3
             // 
@@ -193,38 +225,7 @@
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdicionar.UseVisualStyleBackColor = true;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(10, 209);
-            this.maskedTextBox1.Mask = "00,000,000-0";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(147, 29);
-            this.maskedTextBox1.TabIndex = 17;
-            // 
-            // ColumnNome
-            // 
-            this.ColumnNome.HeaderText = "Nome";
-            this.ColumnNome.Name = "ColumnNome";
-            this.ColumnNome.ReadOnly = true;
-            // 
-            // ColumnCPF
-            // 
-            this.ColumnCPF.HeaderText = "CPF";
-            this.ColumnCPF.Name = "ColumnCPF";
-            this.ColumnCPF.ReadOnly = true;
-            // 
-            // ColumnDataNascimento
-            // 
-            this.ColumnDataNascimento.HeaderText = "Data de Nascimento";
-            this.ColumnDataNascimento.Name = "ColumnDataNascimento";
-            this.ColumnDataNascimento.ReadOnly = true;
-            // 
-            // ColumnRG
-            // 
-            this.ColumnRG.HeaderText = "RG";
-            this.ColumnRG.Name = "ColumnRG";
-            this.ColumnRG.ReadOnly = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
             // 
             // FormCliente
             // 
@@ -240,6 +241,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FormCliente";
             this.Text = "FormCliente";
+            this.Load += new System.EventHandler(this.FormCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -261,12 +263,12 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox mtxtValorConta;
+        private System.Windows.Forms.MaskedTextBox mtxtCPF;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDataNascimento;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRG;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mtxtRG;
     }
 }

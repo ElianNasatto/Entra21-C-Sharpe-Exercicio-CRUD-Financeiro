@@ -11,7 +11,7 @@ namespace FinanceiroRepository
 {
     public class ContaPagarRepository
     {
-        string caminhoConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Documentos\GitHub\C-Sharpe-Entra21-Exercicio-CRUD-Financeiro\C-Sharpe-Entra21-Exercicio-CRUD-Financeiro\Financeiro\BD_Financeiro.mdf;Integrated Security=True;Connect Timeout=30";
+        string caminhoConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\elian\Documents\GitHub\C-Sharpe-Entra21-Exercicio-CRUD-Financeiro\Financeiro\Model\BD_Financeiro.mdf;Integrated Security=True;Connect Timeout=30";
 
         // Lista todas as contas
         public List<ContaPagar> ListarTodos()

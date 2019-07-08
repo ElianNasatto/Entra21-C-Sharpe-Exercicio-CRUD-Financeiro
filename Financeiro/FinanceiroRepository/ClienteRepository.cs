@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace FinanceiroRepository
 {
-    class ClienteRepository
+    public class ClienteRepository
     {
-        string caminhoConexao = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = T:\Documentos\GitHub\C - Sharpe - Entra21 - Exercicio - CRUD - Financeiro\C - Sharpe - Entra21 - Exercicio - CRUD - Financeiro\Financeiro\BD_Financeiro.mdf; Integrated Security = True; Connect Timeout = 30";
+        string caminhoConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\elian\Documents\GitHub\C-Sharpe-Entra21-Exercicio-CRUD-Financeiro\Financeiro\Model\BD_Financeiro.mdf;Integrated Security=True;Connect Timeout=30";
 
         //Insere no banco de dados
-        public bool Inserir(Cliente cliente)
+        public void Inserir(Cliente cliente)
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = caminhoConexao;
@@ -26,7 +26,7 @@ namespace FinanceiroRepository
             catch (Exception)
             {
 
-                return false;
+                return;
             }
 
             SqlCommand comando = new SqlCommand();
@@ -41,11 +41,11 @@ namespace FinanceiroRepository
             {
                 comando.ExecuteNonQuery();
                 conexao.Close();
-                return true;
+                return;
             }
             catch (Exception)
             {
-                return false;
+                return;
             }
 
         }
@@ -61,8 +61,7 @@ namespace FinanceiroRepository
             }
             catch (Exception)
             {
-
-                return false;
+                return null;
             }
 
             SqlCommand comando = new SqlCommand();
@@ -72,7 +71,95 @@ namespace FinanceiroRepository
 
             DataTable tabela = new DataTable();
             tabela.Load(comando.ExecuteReader());
+            comando.Connection.Close();
+
+            List<Cliente> listaClientes = new List<Cliente>();
+
+            for (int i = 0; i < tabela.Rows.Count; i++)
+            {
+                DataRow linha = tabela.Rows[i];
+                Cliente cliente = new Cliente();
+
+                cliente.Id = Convert.ToInt32(linha["id"]);
+                cliente.Nome = linha["nome"].ToString();
+                cliente.CPF = linha["cpf"].ToString();
+                cliente.Data_Nascimento = Convert.ToDateTime(linha["data_nascimento"]);
+                cliente.RG = linha["rg"].ToString();
+
+                listaClientes.Add(cliente);
+
+            }
+
+            return listaClientes;
+
         }
+
+        public void Deletar(int id)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = caminhoConexao;
+            try
+            {
+                conexao.Open();
+            }
+            catch (Exception)
+            {
+                return;
+            }
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = "DELETE FROM clientes WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", id);
+            try
+            {
+            comando.ExecuteNonQuery();
+            conexao.Close();
+
+            }
+            catch (Exception)
+            {
+                conexao.Close();
+                return;
+                
+            }
+        }
+
+        public void Alterar(Cliente cliente)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = caminhoConexao;
+            try
+            {
+                conexao.Open();
+            }
+            catch (Exception)
+            {
+                return;
+            }
+
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = "UPDATE clientes SET nome = @NOME, cpf = @CPF,data_nascimento = @DATA_NASCIMENTO,rg = @RG WHERE id = @id ";
+
+            comando.Parameters.AddWithValue("@ID", cliente.Id);
+            comando.Parameters.AddWithValue("@NOME", cliente.Nome);
+            comando.Parameters.AddWithValue("@DATA_NASCIMENTO", cliente.Data_Nascimento);
+            comando.Parameters.AddWithValue("@RG", cliente.RG);
+
+            try
+            {
+                comando.ExecuteNonQuery();
+                conexao.Close();
+            }
+            catch (Exception)
+            {
+                conexao.Close();
+                return;
+            }
+        }
+
 
     }
 
