@@ -11,10 +11,10 @@ namespace FinanceiroRepository
 {
     public class ClienteRepository
     {
-        string caminhoConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\elian\Documents\GitHub\C-Sharpe-Entra21-Exercicio-CRUD-Financeiro\Financeiro\Model\BD_Financeiro.mdf;Integrated Security=True;Connect Timeout=30";
+        string caminhoConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Documentos\GitHub\C-Sharpe-Entra21-Exercicio-CRUD-Financeiro\Financeiro\BD_Financeiro.mdf;Integrated Security=True;Connect Timeout=30";
 
         //Insere no banco de dados
-        public void Inserir(Cliente cliente)
+        public bool Inserir(Cliente cliente)
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = caminhoConexao;
@@ -26,27 +26,22 @@ namespace FinanceiroRepository
             catch (Exception)
             {
 
-                return;
+                return false;
             }
 
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
 
-            comando.CommandText = "INSERT INTO Clientes nome,cpf,data_nascimento,rg VALUES (@NOME,@CPF,@DATA_NASCIMENTO,@RG)";
+            comando.CommandText = "INSERT INTO clientes (nome,cpf,data_nascimento,rg) VALUES (@NOME,@CPF,@DATA_NASCIMENTO,@RG)";
             comando.Parameters.AddWithValue("@NOME", cliente.Nome);
             comando.Parameters.AddWithValue("@CPF", cliente.CPF);
             comando.Parameters.AddWithValue("@DATA_NASCIMENTO", cliente.Data_Nascimento);
             comando.Parameters.AddWithValue("@RG", cliente.RG);
-            try
-            {
+            
                 comando.ExecuteNonQuery();
                 conexao.Close();
-                return;
-            }
-            catch (Exception)
-            {
-                return;
-            }
+                return true;
+            
 
         }
 
@@ -94,7 +89,7 @@ namespace FinanceiroRepository
 
         }
 
-        public void Deletar(int id)
+        public bool Deletar(int id)
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = caminhoConexao;
@@ -104,7 +99,7 @@ namespace FinanceiroRepository
             }
             catch (Exception)
             {
-                return;
+                return false;
             }
 
             SqlCommand comando = new SqlCommand();
@@ -113,19 +108,20 @@ namespace FinanceiroRepository
             comando.Parameters.AddWithValue("@ID", id);
             try
             {
-            comando.ExecuteNonQuery();
-            conexao.Close();
+                comando.ExecuteNonQuery();
+                conexao.Close();
+                return true;
 
             }
             catch (Exception)
             {
                 conexao.Close();
-                return;
-                
+                return false;
+
             }
         }
 
-        public void Alterar(Cliente cliente)
+        public bool Alterar(Cliente cliente)
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = caminhoConexao;
@@ -135,7 +131,7 @@ namespace FinanceiroRepository
             }
             catch (Exception)
             {
-                return;
+                return false;
             }
 
 
@@ -145,22 +141,43 @@ namespace FinanceiroRepository
 
             comando.Parameters.AddWithValue("@ID", cliente.Id);
             comando.Parameters.AddWithValue("@NOME", cliente.Nome);
+            comando.Parameters.AddWithValue("@CPF", cliente.CPF);
             comando.Parameters.AddWithValue("@DATA_NASCIMENTO", cliente.Data_Nascimento);
             comando.Parameters.AddWithValue("@RG", cliente.RG);
 
-            try
-            {
-                comando.ExecuteNonQuery();
-                conexao.Close();
-            }
-            catch (Exception)
-            {
-                conexao.Close();
-                return;
-            }
+
+
+            comando.ExecuteNonQuery();
+            conexao.Close();
+            return true;
+
         }
 
+        public Cliente BuscarPeloId(int id)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = caminhoConexao;
+            conexao.Open();
 
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = "SELECT * FROM clientes WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", id);
+
+            DataTable tabela = new DataTable();
+            tabela.Load(comando.ExecuteReader());
+            conexao.Close();
+
+            DataRow linha = tabela.Rows[0];
+            Cliente cliente = new Cliente();
+            cliente.Id = Convert.ToInt32(linha["id"]);
+            cliente.Nome = linha["nome"].ToString();
+            cliente.CPF = linha["cpf"].ToString();
+            cliente.Data_Nascimento = Convert.ToDateTime(linha["data_nascimento"]);
+            cliente.RG = linha["rg"].ToString();
+
+            return cliente;
+        }
     }
 
 }
